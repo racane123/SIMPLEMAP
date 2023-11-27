@@ -297,6 +297,7 @@ var featureLayer = new ol.layer.Vector({
     var geometry = feature.getGeometry().getType();
     var styles = [];
 
+
     if (geometry === 'Point') {
       styles.push(
         new ol.style.Style({
@@ -321,6 +322,7 @@ var featureLayer = new ol.layer.Vector({
           }),
         })
       );
+
     } else if (geometry === 'Polygon') {
       styles.push(
         new ol.style.Style({
@@ -333,11 +335,14 @@ var featureLayer = new ol.layer.Vector({
           }),
         })
       );
+
     }
 
     return styles;
   },
 });
+
+
 
  
  // Popup overlay with popupClass=anim
